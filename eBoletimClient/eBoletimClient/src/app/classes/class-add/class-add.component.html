@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <label>Teacher</label>
+    <select class="form-control" #teacher>
+      <option selected="true">Select</option>
+      <option *ngFor="let teacher of teachers" value="{{ teacher.id }}">
+        {{ teacher.name + " " + teacher.surname }}
+      </option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label>Subject</label>
+    <select class="form-control" #subject>
+      <option selected="true">Select</option>
+      <option *ngFor="let subject of subjects" value="{{ subject.id }}">
+        {{ subject.subjectName }}
+      </option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label>Year</label>
+    <input class="form-control" type="number" #yearInput value="2022" />
+  </div>
+  <div class="col-md-2">
+    <button
+      class="btn btn-success"
+      style="margin-top: 20px"
+      (click)="insertClass({
+        year:yearInput.value,
+        teacherId:teacher.value,
+        subjectId:subject.value
+      })"
+    >
+      Register New Class
+    </button>
+  </div>
+</div>

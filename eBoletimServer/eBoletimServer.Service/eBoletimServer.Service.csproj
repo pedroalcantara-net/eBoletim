@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eBoletim.Server.CrossCutting\eBoletim.Server.CrossCutting.csproj" />
+    <ProjectReference Include="..\eBoletimServer.DataAccess\eBoletimServer.DataAccess.csproj" />
+    <ProjectReference Include="..\eBoletimServer.Domain\eBoletimServer.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

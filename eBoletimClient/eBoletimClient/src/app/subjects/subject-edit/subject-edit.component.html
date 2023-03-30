@@ -1,0 +1,20 @@
+<div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+      <a>New Subject Name: </a>
+      <input
+        #newSubject
+        type="text"
+        class="form-control"
+        placeholder="New Subject Name"
+        [value]="subjectName"
+      />
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-success" style="margin-top:20px"  (click)="updateSubject(newSubject.value)">
+        Update Subject
+      </button>
+    </div>
+  </div>
+</div>

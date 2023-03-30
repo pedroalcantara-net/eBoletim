@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@aspnet/signalr": "^1.0.27",
+    "@types/tabulator-tables": "^5.32.0",
+    "tabulator-tables": "^5.3.4"
+  }
+}

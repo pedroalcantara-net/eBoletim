@@ -1,0 +1,26 @@
+<div>
+  <table class="eboTable">
+    <tr class="">
+      <th>Subject</th>
+      <th>Teacher</th>
+      <th>Year</th>
+      <th>Q1</th>
+      <th>Q2</th>
+      <th>Q3</th>
+      <th>Q4</th>
+      <th>Average</th>
+      <th>Status</th>
+    </tr>
+    <tr *ngFor="let post of data">
+      <td>{{ post.subject }}</td>
+      <td>{{ post.teacherName }}</td>
+      <td>{{ post.year }}</td>
+      <td><span [ngStyle]="{'color': (post.quarter1<5) ? 'red' : '#00000'}">{{ post.quarter1 }}</span></td>
+      <td><span [ngStyle]="{'color': (post.quarter2<5) ? 'red' : '#00000'}">{{ post.quarter2 }}</span></td>
+      <td><span [ngStyle]="{'color': (post.quarter3<5) ? 'red' : '#00000'}">{{ post.quarter3 }}</span></td>
+      <td><span [ngStyle]="{'color': (post.quarter4<5) ? 'red' : '#00000'}">{{ post.quarter4 }}</span></td>
+      <td><span [ngStyle]="{'color': (post.average<5) ? 'red' : '#00000'}">{{ post.average }}</span></td>
+      <td><span [ngStyle]="{'color': (post.status=='Failed') ? 'red' : '#00000'}">{{ post.status }}</span></td>
+    </tr>
+  </table>
+</div>

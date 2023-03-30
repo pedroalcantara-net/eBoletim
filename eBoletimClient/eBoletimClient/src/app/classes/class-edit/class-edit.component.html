@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <label>Teacher</label>
+    <select class="form-control" #teacher [(ngModel)]="classe.teacherId">
+      <option *ngFor="let teacher of teachers" value="{{ teacher.id }}">
+        {{ teacher.name + " " + teacher.surname }}
+      </option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label>Subject</label>
+    <select class="form-control" #subject  [(ngModel)]="classe.subjectId">
+      <option *ngFor="let subject of subjects" value="{{ subject.id }}">
+        {{ subject.subjectName }}
+      </option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label>Year</label>
+    <input class="form-control" type="number" #yearInput  value="{{classe.year}}" />
+  </div>
+  <div class="col-md-2">
+    <button
+      class="btn btn-success"
+      style="margin-top: 20px"
+      (click)="editClass({
+        year:yearInput.value,
+        teacherId:teacher.value,
+        subjectId:subject.value
+      })"
+    >
+      Update Class
+    </button>
+  </div>
+</div>

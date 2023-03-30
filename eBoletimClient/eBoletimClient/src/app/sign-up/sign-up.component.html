@@ -1,0 +1,85 @@
+<div class="signUpPage">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+      <label>First Name*</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="First Name"
+        #firstName
+      />
+    </div>
+    <div class="col-md-4">
+      <label>Last Name*</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Last Name"
+        #lastName
+      />
+    </div>
+    <div class="col-md-4">
+      <label>CPF*</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="000.000.000-00"
+        #cpf
+      />
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+      <label>E-mail*</label>
+      <input type="text" class="form-control" placeholder="E-mail" #email />
+    </div>
+    <div class="col-md-4">
+      <label>Password*</label>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        #password
+      />
+    </div>
+    <div class="col-md-4">
+      <label>Confirm Password*</label>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Confirm Password"
+        #passwordC
+      />
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+      <label>Role*</label>
+      <select class="form-control" #role>
+        <option value="1">Teacher</option>
+        <option value="2" selected>Student</option>
+      </select>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-1">
+      <button
+        type="button"
+        class="btn btn-success"
+        (click)="signUp
+          ({
+            name: firstName.value,
+            surname: lastName.value,
+            cpf: cpf.value,
+            email: email.value,
+            password: password.value,
+            passwordC: passwordC.value,
+            roleId: role.value
+          })
+        "
+      >
+        Sign Up
+      </button>
+    </div>
+  </div>
+</div>

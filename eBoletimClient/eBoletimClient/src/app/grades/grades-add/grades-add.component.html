@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2">
+    <label>Student</label>
+    <select class="form-control" #studentInput>
+      <option selected="true">Select</option>
+      <option *ngFor="let student of students" value="{{ student.id }}">
+        {{ student.name + " " + student.surname }}
+      </option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label>Class</label>
+    <select class="form-control" #classInput>
+      <option selected="true">Select</option>
+      <option *ngFor="let classe of classes" value="{{ classe.id }}">
+        {{ classe.id+ " - "}} <b>{{classe.subjectName}}</b>{{" - " + classe.year }}
+      </option>
+    </select>
+  </div>
+  <div class="col-md-1">
+    <label>Grade (0-10)</label>
+    <input class="form-control" #gradeInput type="number" value="0" min="0" max="10">
+  </div>
+  <div class="col-md-1">
+    <label>Quarter</label>
+    <select class="form-control" #quarterInput>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+  <div class="col-md">
+    <button
+      class="btn btn-success"
+      style="margin-top: 20px"
+      (click)="insertGrades({
+        studentId:studentInput.value,
+        classId:classInput.value,
+        grade: gradeInput.value,
+        quarter: quarterInput.value
+      })"
+    >
+      Register New Grade
+    </button>
+  </div>
+</div>

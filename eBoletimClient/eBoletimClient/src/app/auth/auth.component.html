@@ -1,0 +1,36 @@
+<!-- Added in tutorial 2 -->
+<div class="row">
+  <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" class="loginForm">
+    <div class="form-group">
+      <label for="userName">CPF:</label>
+      <input
+        type="username"
+        id="userName"
+        class="form-control"
+        ngModel
+        name="userName"
+        placeholder="000.000.000-00"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        ngModel
+        name="password"
+        placeholder="Password"
+      />
+    </div>
+    <div class="row" style="margin-bottom: 10px">
+      <button class="btn btn-success" type="submit">
+        Login
+      </button>
+    </div>
+    <div class="row">
+      <span>New Here? <a href="../signup">Sign Up for eBoletim</a></span>
+    </div>
+  </form>
+</div>

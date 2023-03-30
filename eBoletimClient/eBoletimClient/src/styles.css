@@ -1,0 +1,111 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/toastr/build/toastr.css";
+
+.button-primary {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+  background-color: #c5e90b !important;
+  border: 1px solid #a6c509 !important;
+  border-radius: 4px !important;
+  transition: ease-in-out 0.5s !important;
+  height: calc(1.5em + 0.5rem + 2px) !important;
+}
+.button-primary:hover {
+  background-color: #a6c509 !important;
+  border-radius: 5px;
+  transition: ease-in-out 0.5s !important;
+}
+.menuOption {
+  height: calc(6em + 1rem + 2px);
+  width: calc(6em + 1rem + 2px);
+  color: #f8f8ff;
+}
+
+.primary {
+  color: #f8f8ff;
+  background-color: #28a745;
+  border: 1px solid #145423;
+  border-radius: 4px;
+  transition: ease-in-out 0.5s;
+}
+
+.primary:hover {
+  background-color: #218939;
+  border-radius: 5px;
+  transition: ease-in-out 0.5s;
+}
+
+.mainPage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentBlock {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.contentBlockLarge {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.row {
+  margin-top: 16px;
+}
+
+a {
+  color: inherit !important; /* blue colors for links too */
+  text-decoration: inherit !important; /* no underline */
+}
+
+.signUpPage {
+  padding:16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/*my table styles*/
+.eboTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.eboTable td, .eboTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.eboTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.eboTable tr:hover {background-color: #ddd;}
+
+.eboTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+button {
+  margin-right:8px !important;
+}

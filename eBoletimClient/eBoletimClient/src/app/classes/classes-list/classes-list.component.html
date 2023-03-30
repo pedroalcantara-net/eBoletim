@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <button class="btn btn-success" (click)="goToAdd()">Add New Class</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <table class="eboTable">
+      <tr class="">
+        <th>ID</th>
+        <th>Year</th>
+        <th>Subject</th>
+        <th>Teacher</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let classe of data">
+        <td>{{ classe.id }}</td>
+        <td>{{ classe.year }}</td>
+        <td>{{ classe.subjectName }}</td>
+        <td>{{ classe.teacherName }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="editClass(classe.id)">Edit</button>
+          <button
+            type="button"
+            (click)="deleteClass(classe.id)"
+            class="btn btn-danger"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
